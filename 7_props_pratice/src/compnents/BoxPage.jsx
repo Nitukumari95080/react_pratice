@@ -8,6 +8,8 @@ const BoxPage = () => {
       <Box name="Dheeraj" />
       <Box name="Dheeraj"  />
       <Box/>
+      <Box/>
+      <Box/>
       <ByDefaultProps/>
     </div>
   )
