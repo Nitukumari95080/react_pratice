@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 //note -> ager ham pahle jo bhi function likhete h wo pahle run karta h or aywys time karta h jsie without depency useEffect
 const UseEffectExample = () => {
   const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const [count3, setCount3] = useState(0);
+  // const [count2, setCount2] = useState(0);
+  // const [count3, setCount3] = useState(0);
   //without depency use useEffect -> Run on every render
 
-  //   useEffect(() => {
-  //      setTimeout(() => setCount(count + 1), 2000);
-  //   });
+    useEffect(() => {
+       setTimeout(() => setCount(count + 1));
+    });
 
   //when add dependency but empty array passed -> Rund only on the First render
   //   useEffect(() => {
@@ -22,9 +22,9 @@ const UseEffectExample = () => {
   //   }, [count3]);
 
   //when add dependency -> Rund many times  render
-  useEffect(() => {
-    setTimeout(() => setCount(count3 + 1), 1000);
-  }, [count3]);
+  // useEffect(() => {
+  //   setTimeout(() => setCount(count3 + 1), 1000);
+  // }, [count3]);
   return (
     <div className="Hooks">
       <h1>Practice useEffect</h1>
